@@ -1,19 +1,78 @@
-# Disaster Impact Analysis
+# India Disaster Impact Analysis (2010-2025)
 
-An interactive **Power BI dashboard** that analyzes the human and economic impact of natural disasters, with an **Excel** dataset and a **PowerPoint** presentation summarizing the findings.
+An interactive **Power BI dashboard** analyzing natural disasters in India from **2010 to 2025**: how often they occur, where they hit, and their impact in deaths, injuries, economic damage, and relief funds.
+
+---
+
+## Dashboard Preview
+
+![Dashboard Overview](dashboard_overview.png)
+![Dashboard Detail](dashboard_detail.png)
 
 ---
 
 ## Project Overview
 
-Natural disasters affect millions of people and cause large economic losses every year. This project explores disaster records to help answer practical questions such as:
+The dashboard analyzes disaster events across Indian cities and years, and helps answer questions such as:
 
-- Which disaster types occur most often, and which are the most destructive?
-- Which countries and regions are hit hardest?
-- How have deaths, people affected, and economic damage changed over time?
-- Where should preparedness and relief efforts be prioritized?
+- How has the number of disasters changed from 2010 to 2025?
+- Which disaster types cause the most economic damage, and which occur most often?
+- Which cities are most affected in terms of deaths?
+- How do relief funds compare with economic damage?
+- How does disaster severity vary across cities and disaster types?
 
-The dashboard lets users filter and explore the data interactively instead of reading static tables.
+## Dataset
+
+The data is stored in an Excel workbook (`data/disaster_data.xlsx`, sheet `Sheet1`).
+
+| Field | Description |
+|---|---|
+| `Disaster_ID` | Unique ID for each disaster event |
+| `Year` | Year of the event (2010-2025) |
+| `City` | City affected |
+| `Disaster_Type` | Type of disaster |
+| `Severity` | Severity level of the event |
+| `Deaths` | Number of deaths |
+| `Injured` | Number of people injured |
+| `Economic_Damage_USD_Millions` | Economic damage in USD millions |
+| `Relief_Funds_USD_Millions` | Relief funds in USD millions |
+| `Latitude`, `Longitude` | Location coordinates used for the map |
+
+## Dashboard Structure
+
+**Page 1 - Overview:** project title and a summary of the dashboard's purpose.
+
+**Page 2 - Dashboard:**
+- **KPI cards:** Total Economic Damage, Total Relief Funds, Total Deaths, Total Injured
+- **Line chart:** number of disasters by year
+- **Column chart:** economic damage by disaster type
+- **Pie chart:** share of disasters by disaster type
+- **Map:** locations of disasters, sized by deaths
+- **Slicers:** filter by Year, City, Disaster Type, and Severity
+
+**Page 3 - Conclusion:** summary of findings and future scope.
+
+## Tools Used
+
+- **Microsoft Excel**: data storage and preparation
+- **Power BI**: data modeling, interactive visuals, slicers, map visualization
+- **Microsoft PowerPoint**: presentation of the analysis
+
+## Key Insights
+
+> Add 3-4 findings from your own dashboard, each with a real number. Example format:
+> - **[Disaster type]** caused the highest economic damage at about $X million.
+> - **[City]** had the highest number of deaths.
+> - Disaster counts [rose/fell] between 2010 and 2025, peaking in [year].
+> - Relief funds covered about X% of total economic damage.
+
+## Future Scope
+
+- Integrate real-time disaster data from government APIs
+- Add weather and satellite data for predictive analysis
+- Develop AI-based disaster risk forecasting models
+- Include district-level analysis for more detailed insights
+- Create mobile-friendly dashboards for emergency response teams
 
 ## Repository Contents
 
@@ -21,53 +80,15 @@ The dashboard lets users filter and explore the data interactively instead of re
 |---|---|
 | `data/disaster_data.xlsx` | Dataset used for the analysis |
 | `Disaster Impact Analysis.pbix` | Power BI dashboard (open with Power BI Desktop) |
-| `Disaster Impact.pptx` | Presentation summarizing the analysis and findings |
-| `README.md` | Project documentation |
-
-## Tools and Skills Used
-
-- **Microsoft Excel**: data collection, cleaning, and preparation
-- **Power BI**: data modeling, DAX measures, interactive visuals, slicers and filters
-- **Microsoft PowerPoint**: storytelling and presenting insights
-- **Skills demonstrated**: data cleaning, exploratory analysis, KPI design, dashboard design, data storytelling
-
-## Methodology
-
-1. **Data collection**: gathered disaster records into a single Excel workbook.
-2. **Data cleaning**: checked for duplicates, missing values, and inconsistent labels; standardized fields so they could be grouped and compared.
-3. **Data modeling**: loaded the cleaned data into Power BI and created measures (DAX) for key metrics such as total events, deaths, people affected, and economic damage.
-4. **Visualization**: built charts, maps, and KPI cards, with slicers for year, disaster type, and region.
-5. **Insights and presentation**: summarized the main patterns and recommendations in a PowerPoint deck.
-
-## Dashboard Features
-
-- KPI cards for headline totals
-- Trend analysis over time
-- Breakdown by disaster type
-- Geographic view of affected countries or regions
-- Interactive slicers and cross-filtering between visuals
-
-## Key Insights
-
-> Add 3-4 findings from your dashboard here, each with a real number. Example format:
-> - **Floods** were the most frequent disaster type, making up X% of all events.
-> - **Earthquakes** caused the highest number of deaths.
-> - Economic damage increased by X% between YEAR and YEAR.
+| `Disaster Impact.pptx` | Presentation summarizing the analysis |
 
 ## How to Open the Dashboard
 
-1. Download `Disaster Impact Analysis.pbix` from this repository.
+1. Download `Disaster Impact Analysis.pbix`.
 2. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free, Windows only).
-3. Open the `.pbix` file. If Power BI asks for the data source, point it to `data/disaster_data.xlsx`.
-
-## Future Improvements
-
-- Add more years or additional data sources for a longer trend
-- Include population data to compare impact per capita
-- Add forecasting to estimate future disaster impact
-- Publish the report online with Power BI Service
+3. Open the file. If prompted for the data source, point it to `data/disaster_data.xlsx`.
 
 ## Author
 
-**Rujal**
+**Rajneesh Sharma**
 GitHub: [@rujal7](https://github.com/rujal7)
