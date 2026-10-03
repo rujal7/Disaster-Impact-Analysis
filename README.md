@@ -6,8 +6,14 @@ An interactive **Power BI dashboard** analyzing natural disasters in India from 
 
 ## Dashboard Preview
 
-![Dashboard Overview](dashboard_overview.png)
-![Dashboard Detail](dashboard_detail.png)
+**Dashboard page**
+![Dashboard](dashboard.png)
+
+**Overview page**
+![Overview](overview.png)
+
+**Conclusion page**
+![Conclusion](conclusion.png)
 
 ---
 
@@ -22,6 +28,8 @@ The dashboard analyzes disaster events across Indian cities and years, and helps
 - How does disaster severity vary across cities and disaster types?
 
 ## Dataset
+
+> Data source: [state your source here, e.g. a public dataset link, or "sample dataset prepared for this project"]
 
 The data is stored in an Excel workbook (`data/disaster_data.xlsx`, sheet `Sheet1`).
 
@@ -60,11 +68,10 @@ The data is stored in an Excel workbook (`data/disaster_data.xlsx`, sheet `Sheet
 
 ## Key Insights
 
-> Add 3-4 findings from your own dashboard, each with a real number. Example format:
-> - **[Disaster type]** caused the highest economic damage at about $X million.
-> - **[City]** had the highest number of deaths.
-> - Disaster counts [rose/fell] between 2010 and 2025, peaking in [year].
-> - Relief funds covered about X% of total economic damage.
+- **Drought and Heatwave** were the most frequent disaster types (91 events each, about 13.7% of all events each), while **Cyclone** was the least frequent (69 events, about 10.4%).
+- **Tsunami and Heatwave** had the highest economic damage, with **Cyclone** the lowest, though the gap between disaster types is small.
+- The yearly disaster count fluctuated between roughly 30 and 55 events, with a **peak around 2021** and a low around 2015.
+- The analysis covers four major cities: **Chennai, Delhi, Kolkata, and Mumbai**.
 
 ## Future Scope
 
